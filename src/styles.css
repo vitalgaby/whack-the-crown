@@ -1,0 +1,210 @@
+html {
+  box-sizing: border-box;
+  background-color: rgb(255, 134, 233);
+}
+
+/** separated the background and html image */
+
+body {
+  box-sizing: border-box;
+  background-image: url('../assets/background.png');
+  box-shadow: 5px 5px 30px rgb(128, 0, 109);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  z-index:0;
+  overflow: hidden;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 150px;
+}
+
+/** added extra style */
+h1 {
+  text-align: center;
+  font-size: 100px;
+  font-family: cursive, Papyrus, fantasy;
+  color: rgb(90, 0, 128);
+  box-shadow: 0 0 5px rgb(128, 0, 109);
+  padding: 10px 10px;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
+  margin-bottom: 0px;
+  border-radius: 5px;
+}
+
+/** added flashing text */
+.flashing-text {
+  animation: flash 1.5s infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(169, 6, 169);
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+#start {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(255, 0, 208);
+    color: rgb(0, 0, 0);
+    padding: 10px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+}
+/** added the button to start */
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4vh;
+}
+
+/** separated the score and time to each end of the page */
+
+.score-timer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 0px;
+  padding: 10px 10px;
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+#timer {
+  color: rgb(169, 6, 169);
+  font-size: 50px;
+}
+
+#score {
+  color:rgb(169, 6, 169);
+  font-size: 50px;
+}
+
+/** added style to pop up */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+  text-align: center;
+} 
+
+/** adeed style to close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blueviolet;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup p {
+  margin-bottom: 0;
+  font-size: 30px;
+  font-family: cursive;
+  text-align: center;
+  line-height: 1px;
+}
+
+.grid {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  cursor: url('assets/mallet.png'), pointer;
+  margin-bottom: 10px;
+  justify-content: fill;
+}
+
+.hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+}
+
+.hole:after {
+  display: block;
+  background: url("../assets/cloud.png"), bottom center no-repeat;
+  background-size: contain;
+  content:'';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -70%;
+  z-index: 2;
+  pointer-events:none;
+}
+
+.mole {
+  background:url('../assets/crown.png');
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center bottom;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transition: all 1s;
+  pointer-events:auto;
+}
+
+.hole.show .mole {
+  top: 0;
+  transform: scale(1.1);
+}
+
+
+
+/** media */
+@media all and (max-width: 600px){
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 30px;
+}
+#start {
+  background: purple;
+  font-size: 28px;
+}
+.grid {
+  cursor: url('../assets/malletSmall.png'), pointer;
+  }
+.item1 {
+  width: 150px;
+}  
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whack The Crown</title>
+  <link rel="shortcut icon" href="#">
+  <link rel="stylesheet" href="./src/styles.css">
+  </head>
+
+
+  <body>
+
+    <!-- title -->
+    <h1>Whack-The-Crown!</h1>
+
+      <!-- score and timer -->
+
+      <div class="score-timer-container">
+        <h3 id="score-container">
+          <span>score:</span>
+          <span id="score">0</span>
+        </h3>
+        <h3 id="timer-container">
+          <span id="timer">0</span> seconds left.
+        </h3>
+      </div>
+
+      <!-- added a "You Win" popup -->
+      <div id="popup" class="popup">
+        <span class="close-btn" onclick="closePopup()">x</span>
+        <h2>You Win!</h2>
+        <p>Congratulations, </p>
+        <p>you reached a score of 10!</p>
+      </div>
+    
+      <!-- start button -->
+
+      <div>
+        <!--added flashing text-->
+        <h2 class="flashing-text">Click start to play!</h2>
+        <div class="button">
+        <button id="start">START</button>
+      </div>
+
+      <!-- holes 0-9 -->
+  
+    <div class="grid">
+      
+      <div id="hole0" class="hole">
+        <div id="mole0" class="mole"></div>
+      </div>
+
+      <div id="hole1" class="hole">
+        <div id="mole1" class="mole"></div>
+      </div>
+     
+      <div id="hole2" class="hole">
+        <div id="mole2" class="mole"></div>
+      </div>
+
+      <div id="hole3" class="hole">
+        <div id="mole3" class="mole"></div>
+      </div>
+
+      <div id="hole4" class="hole">
+        <div id="mole4" class="mole"></div>
+      </div>
+
+      <div id="hole5" class="hole">
+        <div id="mole5" class="mole"></div>
+      </div>
+
+      <div id="hole6" class="hole">
+        <div id="mole6" class="mole"></div>
+      </div>
+
+      <div id="hole7" class="hole">
+        <div id="mole7" class="mole"></div>
+      </div>
+
+      <div id="hole8" class="hole">
+        <div id="mole8" class="mole"></div>
+      </div>
+
+
+
+      <!--linked index.js -->
+    </div>
+    <script src="./src/index.js"></script>
+  </body>
+</html>
