@@ -12,8 +12,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh; 
-  margin: 0; 
-  padding: 0; 
   overflow: hidden; 
 }
 
@@ -24,10 +22,10 @@ h1 {
   font-family: "Dancing Script", cursive;
   color: rgb(90, 0, 128);
   -webkit-text-stroke: 1px rgb(0, 0, 0);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-  margin: 10px 0 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding-top: 50px;
   border-radius: 3px;
+  margin: 0px;
 }
 
 /** added flashing text */
@@ -203,14 +201,17 @@ h2 {
   h1 {
     font-size: 50px;
     padding-bottom: -4px;
+    padding-top: 5px;
   }
   h2 {
     font-size: 30px;
+    margin-bottom: 0px;
+    margin-top: 5px;
   }
 
   #timer, #score {
     font-size: 20px;
-    padding: 0px 0px;
+    padding: auto;
   } 
 
   .button {
