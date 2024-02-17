@@ -6,7 +6,20 @@ const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer');
 const audioHit = new Audio("./assets/hit.mp3");
 const audioStart = new Audio('./assets/molesong.mp3')
+const cursor = document.querySelector('#cursor');
 
+window.addEventListener('mousemove', e => {
+  cursor.style.top = e.pageY + 'px'
+  cursor.style.left = e.pageX + 'px'
+})
+
+window.addEventListener('mousedown', () => {
+  cursor.classList.add('active')
+})
+
+window.addEventListener('mouseup', () => {
+  cursor.classList.remove('active')
+})
 
 let time = 10;
 let timer;
@@ -138,6 +151,9 @@ function whack() {
   audioHit.currentTime = 0;
   audioHit.play();
 }
+
+
+
 
 /** Adds the 'click' event listeners to the moles. See the instructions 
  * for an example on how to set event listeners using a for loop. */

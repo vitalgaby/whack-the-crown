@@ -18,6 +18,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 150px;
+  cursor: url('../assets/mallet.png'), auto;
 }
 
 /** added extra style */
@@ -120,7 +121,6 @@ h2 {
   position: absolute;
   top: 10px;
   right: 10px;
-  cursor: pointer;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   color: blueviolet;
@@ -144,9 +144,23 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  cursor: url('assets/mallet.png'), pointer;
   margin-bottom: 10px;
   justify-content: fill;
+}
+
+.cursor{
+  height: 110px;
+  width: 100px;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: 100% 100%;
+  transition: transform 0.1s;
+  pointer-events: none; /* Set pointer-events to none to allow interactions with elements underneath */
+}
+.cursor.active{
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .hole {
@@ -201,10 +215,7 @@ h2 {
   background: purple;
   font-size: 28px;
 }
-.grid {
-  cursor: url('../assets/malletSmall.png'), pointer;
   }
 .item1 {
   width: 150px;
 }  
-}
