@@ -6,7 +6,7 @@ const score = document.querySelector('#score');
 const timerDisplay = document.querySelector('#timer');
 const audioHit = new Audio("./assets/hit.mp3");
 const audioStart = new Audio('./assets/molesong.mp3')
-const cursor = document.querySelector('#cursor');
+const cursor = document.querySelector('.cursor');
 
 window.addEventListener('mousemove', e => {
   cursor.style.top = e.pageY + 'px'
