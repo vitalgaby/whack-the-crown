@@ -222,6 +222,10 @@ h2 {
     font-size: 30px;
   }
 
+  p {
+    font-size: 15px;
+  }
+
   #start {
     background: purple;
     font-size: 28px;
