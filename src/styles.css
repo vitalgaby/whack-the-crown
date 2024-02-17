@@ -222,8 +222,8 @@ h2 {
     font-size: 30px;
   }
 
-  p {
-    font-size: 15px;
+  .popup p {
+    font-size: 10px;
   }
 
   #start {
